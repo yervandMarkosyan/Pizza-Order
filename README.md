@@ -39,3 +39,18 @@ cd springboot-pizza-order-app
 ```bash
 http://localhost:8080/design
 ```
+## 🧪 Features
+
+- 🍕 Build-your-own pizza form with categorized ingredients (crust, sauce, cheese, toppings)
+- 🧾 Order summary with delivery and payment details
+- 🗃️ Custom JDBC repository for saving orders and pizzas
+- 🧠 Ingredient filtering by type using model attributes
+- 🛠️ Form validation for name and ingredient selection
+- 🧵 Session-based order tracking across multiple pizzas
+
+## 🛠️ Developer Notes
+
+- H2 Console available at `http://localhost:8080/h2-console`
+- Default JDBC URL: `jdbc:h2:mem:yervandPizza`
+- Tables created manually via SQL or repository logic
+- Logging via SLF4J (`log.info(...)`)
