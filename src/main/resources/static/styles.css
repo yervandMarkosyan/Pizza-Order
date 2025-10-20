@@ -1,0 +1,120 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: light-gray;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: gray;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="submit"] {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: light-gray;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+input[type="submit"]:hover {
+ border-color: gray;
+}
+
+ input[type="submit"]:focus,
+ input[type="submit"]:focus-visible {
+ outline: 4px auto -webkit-focus-ring-color;
+}
+div.ingredient-section:nth-child(odd) {
+	float: left;
+	padding-right: 20px;
+}
+
+div.ingredient-section:nth-child(even) {
+    float: left;
+	padding-right: 0;
+}
+
+div.ingredient-section {
+	width: 50%;
+}
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.validationError {
+
+	color: red;
+}

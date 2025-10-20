@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Design Your Pizza</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<h1>Design Your Pizza</h1>
+<img th:src="@{/images/pizza.png}" />
+<div style="margin-top: 100px; margin-bottom: 30px; text-align: center;">
+    <form method="POST" th:action="@{/design}" th:object="${pizza}">
+        <div class="validationError"
+             th:if="${#fields.hasErrors('ingredients')}"
+             th:errors="*{ingredients}">Ingredient Error</div>
+        <br/>
+        <div>
+            <label for="name">Pizza Name:</label>
+            <input style="width: 70%;" type="text" th:field="*{name}" id="name" required/>
+            <div class="validationError"
+                 th:if="${#fields.hasErrors('name')}"
+                 th:errors="*{name}">Name Error</div>
+            <br/>
+        </div>
+
+        <div class="ingredient-section" id="crust">
+            <h3>🍕 Choose Your Crust</h3>
+            <div th:each="ingredient : ${crust}">
+                <label>
+                    <input type="checkbox" th:value="${ingredient.id}" th:field="*{ingredients}"
+                           class="ingredient-checkbox"/>
+                    <span th:text="${ingredient.name}">Crust Name</span>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="ingredient-section">
+            <h3>🧂 Choose Your Sauce</h3>
+            <div th:each="ingredient : ${sauce}">
+                <label>
+                    <input type="checkbox" th:value="${ingredient.id}" th:field="*{ingredients}"
+                           class="ingredient-checkbox"/>
+                    <span th:text="${ingredient.name}">Sauce Name</span>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="ingredient-section">
+            <h3>🧀 Choose your cheese:</h3>
+            <div th:each="ingredient : ${cheese}">
+                <label>
+                <input type="checkbox" th:value="${ingredient.id}" th:field="*{ingredients}"/>
+                <span th:text="${ingredient.name}">Cheese Name</span><br/>
+                </label>
+            </div>
+        </div>
+
+        <div class="ingredient-section">
+            <h3>🍄🫑🧅 Choose your toppings:</h3>
+            <div th:each="ingredient : ${topping}">
+                <label>
+                <input type="checkbox" th:value="${ingredient.id}" th:field="*{ingredients}"/>
+                <span th:text="${ingredient.name}">Topping Name</span><br/>
+                </label>
+            </div>
+        </div>
+
+        <button type="submit">Build Pizza</button>
+    </form>
+</div>
+</body>
+</html>
