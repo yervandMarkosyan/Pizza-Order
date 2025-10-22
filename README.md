@@ -18,7 +18,7 @@ A full-stack web application built with Java Spring Boot and Thymeleaf for serve
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/springboot-pizza-order-app.git
+git clone https://github.com/yervandMarkosyan/Pizza-Order.git
 cd springboot-pizza-order-app
 ```
 
